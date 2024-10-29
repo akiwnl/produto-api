@@ -20,7 +20,7 @@ Antes de começar, você precisará ter instalado:
 ### Clone o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/produto-api.git
+git clone https://github.com/akiwnl/produto-api.git
 ```
 
 ### Configure o .env
