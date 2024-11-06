@@ -48,6 +48,8 @@ Em seguida, use o seguinte comando para inicializar a aplicação.
 npm run dev
 ```
 
+Para uma experiência melhor, foi criado uma aplicação front-end.
+Mais detalhes podem ser encontados aqui: [produto-front](https://github.com/akiwnl/produto-front)
 
 ## Autor
   - Kaike Carvalho - kaikecarvalho@alunos.utfpr.edu.br
