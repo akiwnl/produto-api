@@ -1,52 +1,53 @@
-# produto-api
-Repositório destinado para a disciplina de Desenvolvimento Móvel.
+## Sobre
+O aplicativo foi desenvolvido usando Flutter para a disciplina de Desenvolvimento Móvel da Universidade Tecnológica Federal do Paraná - Campus Campo Mourão, 
+com a finalidade de conhecer a tecnologia e ter um primeiro contato com a linguagem.
+As funcionalidades presentes no aplicativo são:
+  - Cadastro de produtos
+  - Edição de produtos
+  - Listagem de produtos
+  - Deletar produtos
 
-## Tecnologias utilizadas
-
-- Node.js
-- PostgreSQL
-
-## Pré-requisitos
-
-Antes de começar, você precisará ter instalado:
-
- - Node.js
- - NPM ou Yarn
- - PostgreSQL
-
-
-## Configurações
-
-### Clone o repositório
+## Instalação
+ 
+Clone o repositório com o seguinte comando:
 
 ```bash
 git clone https://github.com/akiwnl/produto-api.git
 ```
 
-### Configure o .env
+Na sequência, acesse o diretório do repositório clonado e instale as dependências do projeto, com o seguinte comando:
 
-Ao clonar o repositório, será necessário ter o .env configurado corretamente para que o banco de dados seja conectado com sucesso. Para isso, rode o comando abaixo e coloque as informações da sua máquina.
+```bash
+npm install
+```
+
+Na sequência é necessário criar um arquivo `.env`. O modelo pode ser encontrado no arquivo `.env.example` localizado na raiz do projeto.
+
+Não esqueça de colocar os dados corretamente para a conexão com o banco de dados ser feita com sucesso!
+
 ```bash
 cp .env.example .env
 ```
 
-### Executando
+Após a criação do arquivo `.env`, será necessário rodar o docker. Para isso, deve-se utilizar o comando:
 
-Primeiro, entre no diretório onde o projeto foi copiado.
 ```bash
-cd produto-api
-```
-Instale as dependencias
-```bash
-npm install
-```
-ou
-```bash
-yarn
+docker compose up -d
 ```
 
-Execute a API
+Com o .env devidamente configurado, é necessário executar o comando para criar a tabela no banco de dados.
+Com esse script, o banco de dados será preenchido com alguns dados fictícios.
+
+```bash
+ node .\src\db.js
+```
+
+Em seguida, use o seguinte comando para inicializar a aplicação. 
+
 ```bash
 npm run dev
 ```
-Ao executar a API, a tabela de produtos e o seeding do banco de dados serão feitos automaticamente.
+
+
+## Autor
+  - Kaike Carvalho - kaikecarvalho@alunos.utfpr.edu.br
