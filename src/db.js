@@ -20,9 +20,15 @@ const runScript = async (filePath) => {
 
 const runAllScripts = async () => {
   await runScript("./createTable.sql");
-  await runScript("./seed.sql");
-};
 
+  const result = await pool.query("SELECT COUNT (*) FROM PRODUCTS");
+
+  const count = parseInt(result.rows[0].count, 10);
+
+  if (count === 0) {
+    await runScript("./seed.sql");
+  }
+};
 runAllScripts();
 
 module.exports = pool;
